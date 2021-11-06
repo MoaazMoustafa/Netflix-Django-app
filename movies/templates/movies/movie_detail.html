@@ -1,0 +1,45 @@
+{% extends 'main/base_layout.html' %}
+
+{% block title %}
+Movie details
+{% endblock %}
+
+{% block main-content %}
+<div class="container">
+    <div class="row">
+        <div class="text-center col-12">
+            <div class="card">
+                <div class="card-title">
+                    {{movie.name}}
+                </div>
+                <div>{{movie.description}}</div>
+                <div>{{movie.likes}}</div>
+                <!-- {% if movie.poster %} -->
+                    <div>
+                        <img src="{{movie.poster.url}}" alt="Teeeeeeeee"></div>
+                <!-- {% endif %} -->
+                <div>
+                    <ul>
+                        <li><h3>Actors</h3></li>
+                        {% for actor in movie.actors.all %}
+                            <li>{{actor.first_name}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><h3>Reviews</h3></li>
+                        {% for review in movie.review_set.all %}
+                            <li>{{review.comment}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

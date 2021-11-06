@@ -1,0 +1,40 @@
+{% extends 'main/base_layout.html' %}
+
+{% block title %}
+index Movies
+{% endblock %}
+
+
+{% block main-content %}
+
+<table class="table">
+    <thead>
+    <tr>
+        <td>Movie</td>
+        <td>Desc</td>
+        <td>Likes</td>
+        <td>Rating</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for movie in movies %}
+
+    <tr>
+        <td>{{movie}}</td>
+        <td>{{movie.description}}</td>
+        <td>{{movie.likes}}</td>
+        <td>{{movie.rate}}</td>
+        <td><a href="{% url 'movie:movie-detail' movie.id %}" class="btn btn-info"> View</a></td>
+        <td><a href="{% url 'movie:movie-update' movie.id %}" class="btn btn-warning"> Update</a></td>
+        <td><a href="{% url 'movie:movie-delete' movie.id %}" class="btn btn-danger"> Delete</a></td>
+    </tr>
+    {% endfor %}
+    <div>
+    <a href="{% url 'movie:movie-create' %}" class="btn btn-info"> Create</a>
+
+    </div>
+    </tbody>
+</table>
+
+{% endblock %}

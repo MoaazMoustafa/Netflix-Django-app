@@ -1,0 +1,34 @@
+{% extends 'main/base_layout.html' %}
+
+
+{% block title %}
+Create Movie
+{% endblock %}
+
+
+{% block main-content %}
+<div class="container">
+    <div class="row">
+        <div class="text-center col-12">
+
+            <form method="post" action="{% url 'movie:movie-create' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {{form.as_p}}
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="text-center mt-5" style="display:inline">
+                    <a href="{% url 'movie:movie-index'%}">
+                        <button type="button" class="btn btn-info">
+                            Back to Movie Index
+                        </button>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
