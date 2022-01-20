@@ -1,16 +1,16 @@
-# A Movies webapp using Django framework
+# A Movies Blog using Django framework
 
 #### Video Demo: < https://www.youtube.com/watch?v=rXaEs1Drzzc&ab_channel=moaazmoustafa>
 
 #### Description:
 
 This is a Django web application in which the user can register a new account and add new movies to the web app
-I used the django bulit in authentication to authenticate the users and used the django admin panel and customized it
+I used the django built in authentication to authenticate the users and used the django admin panel and customized it
 In this project i used django and ORM and DTL and bootstrap
 the user can upload poster for there loved movies
 I used Django, Postgresql, Bootstrap, ORM, DML.
 
-This project is consits of three apps the first one is the main app which is named Netflix.
+This project  consits of three apps the first one is the main app which is named Netflix.
 The second one is the movies one which consists of the the models it has three models the main one is the Movie and an Actor model and Review model
 These models map in the Postgres database as tables thanks to the ORM (object releational mapper)
 I used a lot of fields such as char, text, number, image, many to many and Forign key
