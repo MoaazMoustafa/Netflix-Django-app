@@ -1,6 +1,6 @@
 # A Movies Blog using Django framework
 
-#### Video Demo: < https://www.youtube.com/watch?v=rXaEs1Drzzc&ab_channel=moaazmoustafa>
+#### [Video Demo](https://www.youtube.com/watch?v=rXaEs1Drzzc&ab_channel=moaazmoustafa)
 
 #### Description:
 
